@@ -16,10 +16,20 @@
   },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
+    "bootstrap": "^5.0.0",
+    "bootstrap-icons": "^1.11.1",
+    "counterup": "^1.0.2",
+    "easing": "^1.2.1",
     "gatsby": "^5.11.0",
     "gatsby-plugin-mdx": "^5.11.0",
     "gatsby-source-filesystem": "^5.11.0",
+    "glightbox": "^3.2.0",
+    "jquery": "^3.4.1",
+    "jquery.counterup": "^2.1.0",
+    "owl.carousel": "^2.3.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "waypoints": "^4.0.1",
+    "wowjs": "^1.1.3"
   }
 }

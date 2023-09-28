@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `243online`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `243technologies`,
+    siteUrl: `https://243technologies.com`
   },
   plugins: ["gatsby-plugin-mdx", {
     resolve: 'gatsby-source-filesystem',

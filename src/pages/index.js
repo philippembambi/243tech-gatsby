@@ -1,176 +1,871 @@
-import * as React from "react"
+import * as React from "react";
+import "../lib/owlcarousel/assets/owl.carousel.min.css";
+import "../lib/animate/animate.min.css";
+import "../css/bootstrap.min.css";
+import "../css//bootstrap-icons/bootstrap-icons.css";
+import "../css/glightbox/css/glightbox.min.css";
+import "../css/style.css";
+import "../css/custom.css";
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
+import logo from "../images/logo.png";
+import banner3 from "../images/banner-3.jpg";
+import banner2 from "../images/banner-two.jpg";
+import features from "../images/features.jpeg";
+import splot from "../multimedia/splot.mp4";
+import Layout from "../components/layout";
 
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
+    <Layout pageTitle="Page d'acceuil">
+      <div class="container-fluid bg-dark px-5 d-none d-lg-block">
+        <div class="row gx-0">
+          <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
+            <div
+              class="d-inline-flex align-items-center"
+              style={{ height: "45px" }}
+            >
+              <small class="me-3 text-light">
+                <i class="fa fa-map-marker-alt me-2"></i>6 tabora, Kinshasa
+                gombe, RDC
+              </small>
+              <small class="me-3 text-light">
+                <i class="fa fa-phone-alt me-2"></i>+243 810 836 943
+              </small>
+              <small class="text-light">
+                <i class="fa fa-envelope-open me-2"></i>
+                hello@243technologies.com
+              </small>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center text-lg-end">
+            <div
+              class="d-inline-flex align-items-center"
+              style={{ height: "45px" }}
+            >
               <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+                class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                href="https://web.facebook.com/profile.php?id=100083306892317"
               >
-                {link.text}
+                <i class="fab fa-facebook-f fw-normal"></i>
               </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
-}
+              <a
+                class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                href="https://www.linkedin.com/company/243technologies/"
+              >
+                <i class="fab fa-linkedin-in fw-normal"></i>
+              </a>
+              <a
+                class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
+                href="https://www.instagram.com/243_technologies/"
+              >
+                <i class="fab fa-instagram fw-normal"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-export default IndexPage
+      <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+          <a href="./" class="navbar-brand p-0">
+            <img src={logo} alt="logo" class="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+          >
+            <span class="fa fa-bars"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+              <a href="./" class="nav-item nav-link active">
+                Accueil
+              </a>
 
-export const Head = () => <title>Home Page</title>
+              <a href="#our_services" class="nav-item nav-link">
+                Services
+              </a>
+              <a href="#our_offers" class="nav-item nav-link">
+                Offres
+              </a>
+              <a href="./team.html" class="nav-item nav-link">
+                Notre équipe
+              </a>
+              <a href="#our_contacts" class="nav-item nav-link">
+                Contactez-nous
+              </a>
+            </div>
+            <a
+              style={{ color: "white" }}
+              href="https://api.whatsapp.com/send?phone=+243810836943&text=Laissez-nous%20un%20message"
+              class="btn btn-primary py-2 px-4 ms-3"
+            >
+              <i
+                class="bi bi-whatsapp text-secondary"
+                style={{ fontSize: "22px" }}
+              ></i>
+              &nbsp;&nbsp; Appelez d'urgence ?
+            </a>
+          </div>
+        </nav>
+
+        <div
+          id="header-carousel"
+          class="carousel slide carousel-fade"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="w-100 carousselimage" src={banner3} alt="Image" />
+              <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style={{ maxWidth: "900px" }}>
+                  <h3 class="text-white text-uppercase mb-3 animated slideInDown">
+                    La technologie à portée de main
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <img class="w-100 carousselimage" src={banner2} alt="Image" />
+              <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                <div class="p-3" style={{ maxWidth: "900px" }}>
+                  <h4 class="text-white text-uppercase mb-3 animated slideInDown">
+                    Des solutions adaptées à vos besoins numériques
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#header-carousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="container-fluid facts py-5 pt-lg-0">
+        <div class="container py-5 pt-lg-0">
+          <div class="row gx-0">
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
+                style={{ height: "150px" }}
+              >
+                <div
+                  class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                  style={{ width: "60px", height: "60px" }}
+                >
+                  <i
+                    class="bi bi-person-check-fill text-secondary"
+                    style={{ fontSize: "27px" }}
+                  ></i>
+                </div>
+                <div class="ps-4">
+                  <h5 class="text-white mb-0">Clients Satisfaits</h5>
+                  <h3 class="text-white mb-0" data-toggle="counter-up">
+                    15
+                  </h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+              <div
+                class="bg-light shadow d-flex align-items-center justify-content-center p-4"
+                style={{ height: "150px" }}
+              >
+                <div
+                  class="bg-primary d-flex align-items-center justify-content-center rounded mb-2"
+                  style={{ width: "60px", height: "60px" }}
+                >
+                  <i
+                    class="bi bi-palette2 text-secondary"
+                    style={{ fontSize: "27px" }}
+                  ></i>
+                </div>
+                <div class="ps-4">
+                  <h5 class="text-primary mb-0">Projets Effectués</h5>
+                  <h3 class="mb-0" data-toggle="counter-up">
+                    203
+                  </h3>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+              <div
+                class="bg-primary shadow d-flex align-items-center justify-content-center p-4"
+                style={{ height: "150px" }}
+              >
+                <div
+                  class="bg-white d-flex align-items-center justify-content-center rounded mb-2"
+                  style={{ width: "60px", height: "60px" }}
+                >
+                  <i
+                    class="bi bi-mortarboard-fill text-secondary"
+                    style={{ fontSize: "27px" }}
+                  ></i>
+                </div>
+                <div class="ps-4">
+                  <h5 class="text-white mb-0">Master Class organisées</h5>
+                  <h3 class="text-white mb-0" data-toggle="counter-up">
+                    5
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5" id="about_us">
+          <div class="row g-5">
+            <div class="col-lg-7">
+              <div class="section-title position-relative pb-3 mb-5">
+                <h4 class="fw-bold text-primary text-uppercase">
+                  &Agrave; propos de nous
+                </h4>
+                <h5 class="mb-0" style={{ color: "rgb(107, 103, 103)" }}>
+                  Offrir l'excellence dans le traitement de données à l'échelle
+                  mondiale
+                </h5>
+              </div>
+              <p class="mb-4" style={{ fontSize: "18px" }}>
+                Notre domaine d'activé est le traitement de l'information à
+                l'échelle mondiale tout en déployant des infrastructures cloud
+                managées et auto-managées pour nos clients partout dans le monde
+              </p>
+              <div class="row g-0 mb-3">
+                <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                  <h5 class="mb-3">
+                    <i class="bi bi-alarm-fill text-secondary me-3"></i>Rapidité
+                  </h5>
+                  <h5 class="mb-3">
+                    <i class="fa fa-check text-secondary me-3"></i>Intégrité{" "}
+                  </h5>
+                </div>
+                <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                  <h5 class="mb-3 defaultFont">
+                    <i class="fa fa-check text-secondary me-3"></i>Serviabilité
+                  </h5>
+                  <h5 class="mb-3 defaultFont">
+                    <i class="bi bi-lightbulb-fill text-secondary me-3"></i>
+                    Créativité
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5" style={{ minHeight: "500px" }}>
+              <div class="position-relative h-100">
+                <img
+                  class="position-absolute w-100 h-100 rounded wow zoomIn"
+                  data-wow-delay="0.9s"
+                  src={features}
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="our_services" style={{ marginBottom: "10px" }}></div>
+      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+          <div class="section-title text-center position-relative pb-3 mb-5 mx-auto">
+            <h4 class="fw-bold text-primary text-uppercase">Nos Services</h4>
+            <h4
+              class="mb-0"
+              style={{ color: "#555555", fontWeight: "600", fontSize: "22px" }}
+            >
+              {" "}
+              Des solutions informatiques personnalisées pour votre entreprise{" "}
+            </h4>
+          </div>
+          <div class="row g-5">
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+              <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="service-icon">
+                  <i
+                    class="bi bi-headset text-secondary"
+                    style={{ fontSize: "25px" }}
+                  ></i>
+                </div>
+                <h5 class="mb-3" style={{ color: "#555555" }}>
+                  Consultance
+                </h5>
+                <p class="m-0">
+                  Nous mettons à votre disposition nos experts pour une
+                  assistance de meilleure qualité
+                </p>
+                <a class="btn btn-lg btn-primary rounded" href="">
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+              <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="service-icon">
+                  <i
+                    class="bi bi-bar-chart-line-fill text-secondary"
+                    style={{ fontSize: "25px" }}
+                  ></i>
+                </div>
+                <h5 class="mb-3" style={{ color: "#555555" }}>
+                  Traitement de données
+                </h5>
+                <p class="m-0">
+                  Grâce au Big Data, nous donnons de la valeur aux données en
+                  les traitant intélligement
+                </p>
+                <a class="btn btn-lg btn-primary rounded" href="">
+                  <i class="bi bi-arrow-right text-secondary"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+              <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="service-icon">
+                  <i
+                    class="bi bi-shield-fill-check text-secondary"
+                    style={{ fontSize: "25px" }}
+                  ></i>
+                </div>
+                <h5 class="mb-3" style={{ color: "#555555" }}>
+                  Assurance Qualité
+                </h5>
+                <p class="m-0 defaultFont">
+                  Nous disposons d'une équipe d'experts en assurance qualité de
+                  tous les produits
+                </p>
+                <a class="btn btn-lg btn-primary rounded" href="">
+                  <i class="bi bi-arrow-right text-secondary"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.3s">
+              <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="service-icon">
+                  <i
+                    class="bi bi-windows text-secondary"
+                    style={{ fontSize: "25px" }}
+                  ></i>
+                </div>
+                <h5 class="mb-3" style={{ color: "#555555" }}>
+                  Développement d'applications
+                </h5>
+                <p class="m- defaultFont">
+                  Avez-vous besoin d'une solution logicielle ou d'un service
+                  internet à mettre en place ?
+                </p>
+                <a class="btn btn-lg btn-primary rounded" href="">
+                  <i class="bi bi-arrow-right text-secondary"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.6s">
+              <div class="service-item bg-light rounded d-flex flex-column align-items-center justify-content-center text-center">
+                <div class="service-icon">
+                  <i
+                    class="bi bi-ui-checks-grid text-secondary"
+                    style={{ fontSize: "25px" }}
+                  ></i>
+                </div>
+                <h5 class="mb-3" style={{ color: "#555555" }}>
+                  Automatisation des processus de Développement
+                </h5>
+                <p class="m-0">
+                  Le développement étant évolué, il est nécessaire que le
+                  processus d'intégration au déploiement soit automatisé.{" "}
+                </p>
+                <a class="btn btn-lg btn-primary rounded" href="">
+                  <i class="bi bi-arrow-right text-secondary"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 wow zoomIn" data-wow-delay="0.9s">
+              <div class="position-relative bg-primary rounded h-100 d-flex flex-column align-items-center justify-content-center text-center p-5">
+                <h4 class="text-white mb-3">Nous Contacter</h4>
+                <h3 class="text-white mb-0">+243 810 836 943</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="our_offers"
+        class="section-title text-center position-relative pb-3 mb-5 mx-auto"
+      >
+        <h4 class="fw-bold text-primary text-uppercase">
+          Nos offres spéciales
+        </h4>
+        <h5 class="mb-0" style={{ color: "#555555" }}>
+          {" "}
+          Découvrez des offres idéalement conçues pour vos besoins{" "}
+        </h5>
+      </div>
+
+      <section
+        id="pricing"
+        style={{ marginTop: "-5rem" }}
+        class="pricing wow fadeInUp"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5" data-aos="fade-up">
+          <div class="row g-4 py-lg-5" data-aos="zoom-out" data-aos-delay="100">
+            <div class="col-lg-4">
+              <div class="pricing-item">
+                <h3>Développement d'Applications</h3>
+                <div class="icon">
+                  <i class="bi bi-box"></i>
+                </div>
+                <ul>
+                  <li>
+                    <i class="bi bi-check"></i> UI/UX Design
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> API
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Cross Platform
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Autres
+                  </li>
+                </ul>
+                <div class="text-center">
+                  <a href="#" class="">
+                    &nbsp;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="pricing-item featured">
+                <h3>Infrastructures Cloud</h3>
+                <div class="icon">
+                  <i class="bi bi-cloud-check-fill"></i>
+                </div>
+
+                <ul>
+                  <li>
+                    <i class="bi bi-check"></i> AWS (Auto-managed & managed
+                    Services)
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Cloud Economics
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Cloud Performantes
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Sécurité
+                  </li>
+                </ul>
+                <div class="text-center">
+                  <a href="#" class="">
+                    &nbsp;
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="pricing-item">
+                <h3>Data Processing</h3>
+                <div class="icon">
+                  <i class="bi bi-bar-chart-fill"></i>
+                </div>
+                <ul>
+                  <li>
+                    <i class="bi bi-check"></i> Data Transformation
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Data Visualisation
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Data Pipeline
+                  </li>
+                  <li>
+                    <i class="bi bi-check"></i> Wharehouse As Service
+                  </li>
+                </ul>
+                <div class="text-center">
+                  <a href="#" class="">
+                    &nbsp;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="our_contacts" style={{ marginBottom: "13px" }}></div>
+      <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-7">
+              <div class="section-title position-relative pb-3 mb-5">
+                <h4 class="mb-0">Nous Contacter</h4>
+              </div>
+              <div class="row gx-3">
+                <div class="col-sm-6 wow zoomIn" data-wow-delay="0.2s">
+                  <h5 class="mb-4" style={{ color: "#555555" }}>
+                    <i class="fa fa-clock text-primary me-3"></i>24 heures sur
+                    24
+                  </h5>
+                </div>
+                <div class="col-sm-6 wow zoomIn" data-wow-delay="0.4s">
+                  <h5 class="mb-4" style={{ color: "#555555" }}>
+                    <i class="fa fa-phone-alt text-primary me-3"></i>7 jours sur
+                    7
+                  </h5>
+                </div>
+              </div>
+              <p class="mb-4">
+                Nous mettons à votre disposition une équipe d'assitance prête à
+                vous répondre.
+              </p>
+              <div
+                class="d-flex align-items-center mt-2 wow zoomIn"
+                data-wow-delay="0.6s"
+              >
+                <a href="https://api.whatsapp.com/send?phone=+243810836943&text=Laissez-nous%20un%20message">
+                  <div
+                    class="bg-primary d-flex align-items-center justify-content-center rounded"
+                    style={{ width: "40px", height: "40px" }}
+                  >
+                    <i class="fa fa-phone-alt text-white"></i>
+                  </div>
+                </a>
+                &nbsp;&nbsp;&nbsp;
+                <h5 style={{ color: "#555555" }}>
+                  Discutez avec nous à l'immédiat
+                </h5>
+              </div>
+            </div>
+            <div class="col-lg-5 wow zoomIn">
+              <div
+                class="bg-primary rounded h-100 d-flex align-items-center p-5"
+                data-wow-delay="0.9s"
+              >
+                <div class="row g-3">
+                  <div class="col-12">
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control bg-light border-0"
+                      placeholder="E-mail"
+                      style={{ height: "55px" }}
+                      required
+                    />
+                  </div>
+                  <div class="col-12">
+                    <select
+                      class="form-select bg-light border-0"
+                      id="service"
+                      style={{ height: "55px" }}
+                    >
+                      <option selected>Selectionner le service</option>
+                      <option value="1">Développement d'application</option>
+                      <option value="2">infrastructures cloud</option>
+                      <option value="3">Data Processing</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <textarea
+                      class="form-control bg-light border-0"
+                      id="message"
+                      rows="3"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <button
+                      class="btn btn-secondary w-100 py-3 defaultFont"
+                      type="submit"
+                      onclick="sendEmail()"
+                    >
+                      <span
+                        class="spinner-border d-none"
+                        id="formSpinner"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                      Envoyer
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="alert alert-success mt-2 d-none"
+                id="formSuccess"
+                role="alert"
+              >
+                Votre message a été envoyé avec succès, merci de nous écrire !
+              </div>
+              <div
+                class="alert alert-danger mt-2 d-none"
+                id="formError"
+                role="alert"
+              >
+                Une erreur est survenue lors de l'envoi du message !
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        type="button"
+        id="modalBtn"
+        class="btn btn-primary d-none"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        Launch static backdrop modal
+      </button>
+
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                NewsLetter
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Merci d'avoir souscrit à notre news letter. Nous vous enverons
+              quotidiennement les actualités.
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Ok
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section id="call-to-action" class="container call-to-action">
+        <div
+          class="container text-center splot-container"
+          data-aos="zoom-out"
+          style={{ height: "400px" }}
+        >
+          <div
+            class="splot-box container"
+            style={{
+              backgroundImage: `url(${banner3})`,
+              filter: "brightness(50%)",
+            }}
+          ></div>
+          <div
+            class="splot-box splot-overlay"
+            style={{ filter: "brightness(100%)" }}
+          >
+            <a href={splot} class="glightbox play-btn"></a>
+            <h4 style={{ color: "white" }}>
+              Tout savoir sur nous en 40 secondes
+            </h4>
+            <a class="cta-btn glightbox" href={splot}>
+              Ouvrir la vidéo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div
+        class="container-fluid bg-dark text-light mt-5 wow fadeInUp"
+        data-wow-delay="0.1s"
+      >
+        <div class="container">
+          <div class="row gx-5">
+            <div class="col-lg-4 col-md-6 footer-about">
+              <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-dark p-4">
+                <a href="" class="navbar-brand">
+                  <h1 class="m-0 text-white">
+                    <img src={logo} style={{ height: "120px" }} alt="" />
+                  </h1>
+                </a>
+                <p class="mt-3 mb-4 defaultFont">
+                  243technologies est le partenaire de ses clients. Il vous
+                  accompagne dans toutes les étapes de la réalisation de vos
+                  besoins en numérique
+                </p>
+                <div class="input-group">
+                  <input
+                    type="text"
+                    id="news-letter-email"
+                    class="form-control border-white p-3"
+                    placeholder="Votre adresse Email"
+                  />
+                  <button
+                    onclick="sendNewsLetter()"
+                    class="btn btn-primary defaultFont"
+                  >
+                    <span
+                      class="spinner-border d-none"
+                      id="news-letter-spinner"
+                      role="status"
+                      aria-hidden="true"
+                    ></span>
+                    Souscrire
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8 col-md-6">
+              <div class="row gx-5">
+                <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                  <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                    <h3 class="text-light mb-0">Contactez-nous</h3>
+                  </div>
+                  <div class="d-flex mb-2">
+                    <i class="bi bi-geo-alt me-2"></i>
+                    <p class="mb-0">6 tabora, Kinshasa gombe, RDC</p>
+                  </div>
+                  <div class="d-flex mb-2">
+                    <i class="bi bi-envelope-open me-2"></i>
+                    <p class="mb-0">hello@243technologies.com</p>
+                  </div>
+                  <div class="d-flex mb-2">
+                    <i class="bi bi-telephone me-2"></i>
+                    <p class="mb-0">+243 810 836 943</p>
+                  </div>
+                  <div class="d-flex mt-4">
+                    <a
+                      class="btn btn-primary btn-square me-2"
+                      target="_blank"
+                      href="https://web.facebook.com/profile.php?id=100083306892317"
+                    >
+                      <i class="fab fa-facebook-f fw-normal"></i>
+                    </a>
+                    <a
+                      class="btn btn-primary btn-square me-2"
+                      target="_blank"
+                      href="https://www.linkedin.com/company/243technologies/"
+                    >
+                      <i class="fab fa-linkedin-in fw-normal"></i>
+                    </a>
+                    <a
+                      class="btn btn-primary btn-square"
+                      target="_blank"
+                      href="https://www.instagram.com/243_technologies/"
+                    >
+                      <i class="fab fa-instagram fw-normal"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                  <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                    <h3 class="text-light mb-0">Nos services</h3>
+                  </div>
+                  <div class="link-animated d-flex flex-column justify-content-start">
+                    <a class="text-light mb-2" href="#">
+                      <i class="bi bi-arrow-right me-2"></i>Consultance
+                    </a>
+                    <a class="text-light mb-2" href="#">
+                      <i class="bi bi-arrow-right me-2"></i>Traitement des
+                      données
+                    </a>
+                    <a class="text-light mb-2" href="#nos_services">
+                      <i class="bi bi-arrow-right me-2"></i>Assurance Qualité
+                    </a>
+                    <a class="text-light mb-2" href="#nos_valeurs">
+                      <i class="bi bi-arrow-right me-2"></i>Développement
+                      d'applications
+                    </a>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                  <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                    <h3 class="text-light mb-0">Nos Offres</h3>
+                  </div>
+                  <div class="link-animated d-flex flex-column justify-content-start">
+                    <a href="" class="text-light mb-2">
+                      <i class="bi bi-arrow-right me-2"></i>
+                      Data Processing
+                    </a>
+                    <a href="" class="text-light mb-2 defaultFont">
+                      <i class="bi bi-arrow-right me-2"></i>
+                      Infrastructures Cloud
+                    </a>
+                    <a href="" class="text-light mb-2 defaultFont">
+                      <i class="bi bi-arrow-right me-2"></i>
+                      Développement d'application
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid text-white" style={{ background: "#061429" }}>
+        <div class="container text-center">
+          <div class="row justify-content-end">
+            <div class="col-lg-8 col-md-6">
+              <div
+                class="d-flex align-items-center justify-content-center"
+                style={{ height: "75px" }}
+              >
+                <p class="mb-0">
+                  &copy;{" "}
+                  <a class="text-white border-bottom" href="#">
+                    243 Technologies
+                  </a>
+                  . @ Copyright.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
+export default IndexPage;
+
+export const Head = () => <title>243 technologies</title>;
