@@ -1,4 +1,6 @@
 import * as React from "react";
+import { useEffect } from "react";
+
 import "../lib/owlcarousel/assets/owl.carousel.min.css";
 import "../lib/animate/animate.min.css";
 import "../css/bootstrap.min.css";
@@ -15,8 +17,19 @@ import splot from "../multimedia/splot.mp4";
 import Layout from "../components/layout";
 
 const IndexPage = () => {
+    useEffect(async () => {
+      await import("../js/main")
+    }, []);
+
   return (
     <Layout pageTitle="Page d'acceuil">
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div class="spinner"></div>
+      </div>
+
       <div class="container-fluid bg-dark px-5 d-none d-lg-block">
         <div class="row gx-0">
           <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
