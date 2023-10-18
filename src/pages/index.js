@@ -9,12 +9,14 @@ import "../css/glightbox/css/glightbox.min.css";
 import "../css/style.css";
 import "../css/custom.css";
 
-import logo from "../images/logo.png";
 import banner3 from "../images/banner-3.jpg";
 import banner2 from "../images/banner-two.jpg";
 import features from "../images/features.jpeg";
 import splot from "../multimedia/splot.mp4";
 import Layout from "../components/layout";
+import TopHeader from "../components/header";
+import Menu from "../components/menu";
+import Footer from "../components/footer";
 
 const IndexPage = () => {
     useEffect(async () => {
@@ -30,100 +32,10 @@ const IndexPage = () => {
         <div class="spinner"></div>
       </div>
 
-      <div class="container-fluid bg-dark px-5 d-none d-lg-block">
-        <div class="row gx-0">
-          <div class="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
-            <div
-              class="d-inline-flex align-items-center"
-              style={{ height: "45px" }}
-            >
-              <small class="me-3 text-light">
-                <i class="fa fa-map-marker-alt me-2"></i>6 tabora, Kinshasa
-                gombe, RDC
-              </small>
-              <small class="me-3 text-light">
-                <i class="fa fa-phone-alt me-2"></i>+243 810 836 943
-              </small>
-              <small class="text-light">
-                <i class="fa fa-envelope-open me-2"></i>
-                hello@243technologies.com
-              </small>
-            </div>
-          </div>
-          <div class="col-lg-4 text-center text-lg-end">
-            <div
-              class="d-inline-flex align-items-center"
-              style={{ height: "45px" }}
-            >
-              <a
-                class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                href="https://web.facebook.com/profile.php?id=100083306892317"
-              >
-                <i class="fab fa-facebook-f fw-normal"></i>
-              </a>
-              <a
-                class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                href="https://www.linkedin.com/company/243technologies/"
-              >
-                <i class="fab fa-linkedin-in fw-normal"></i>
-              </a>
-              <a
-                class="btn btn-sm btn-outline-light btn-sm-square rounded-circle me-2"
-                href="https://www.instagram.com/243_technologies/"
-              >
-                <i class="fab fa-instagram fw-normal"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <TopHeader />
       <div class="container-fluid position-relative p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-          <a href="./" class="navbar-brand p-0">
-            <img src={logo} alt="logo" class="logo" />
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-          >
-            <span class="fa fa-bars"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-              <a href="./" class="nav-item nav-link active">
-                Accueil
-              </a>
-
-              <a href="#our_services" class="nav-item nav-link">
-                Services
-              </a>
-              <a href="#our_offers" class="nav-item nav-link">
-                Offres
-              </a>
-              <a href="./team.html" class="nav-item nav-link">
-                Notre équipe
-              </a>
-              <a href="#our_contacts" class="nav-item nav-link">
-                Contactez-nous
-              </a>
-            </div>
-            <a
-              style={{ color: "white" }}
-              href="https://api.whatsapp.com/send?phone=+243810836943&text=Laissez-nous%20un%20message"
-              class="btn btn-primary py-2 px-4 ms-3"
-            >
-              <i
-                class="bi bi-whatsapp text-secondary"
-                style={{ fontSize: "22px" }}
-              ></i>
-              &nbsp;&nbsp; Appelez d'urgence ?
-            </a>
-          </div>
-        </nav>
-
+      <Menu />
+      
         <div
           id="header-carousel"
           class="carousel slide carousel-fade"
@@ -727,154 +639,7 @@ const IndexPage = () => {
         </div>
       </section>
 
-      <div
-        class="container-fluid bg-dark text-light mt-5 wow fadeInUp"
-        data-wow-delay="0.1s"
-      >
-        <div class="container">
-          <div class="row gx-5">
-            <div class="col-lg-4 col-md-6 footer-about">
-              <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-dark p-4">
-                <a href="" class="navbar-brand">
-                  <h1 class="m-0 text-white">
-                    <img src={logo} style={{ height: "120px" }} alt="" />
-                  </h1>
-                </a>
-                <p class="mt-3 mb-4 defaultFont">
-                  243technologies est le partenaire de ses clients. Il vous
-                  accompagne dans toutes les étapes de la réalisation de vos
-                  besoins en numérique
-                </p>
-                <div class="input-group">
-                  <input
-                    type="text"
-                    id="news-letter-email"
-                    class="form-control border-white p-3"
-                    placeholder="Votre adresse Email"
-                  />
-                  <button
-                    onclick="sendNewsLetter()"
-                    class="btn btn-primary defaultFont"
-                  >
-                    <span
-                      class="spinner-border d-none"
-                      id="news-letter-spinner"
-                      role="status"
-                      aria-hidden="true"
-                    ></span>
-                    Souscrire
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8 col-md-6">
-              <div class="row gx-5">
-                <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                  <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                    <h3 class="text-light mb-0">Contactez-nous</h3>
-                  </div>
-                  <div class="d-flex mb-2">
-                    <i class="bi bi-geo-alt me-2"></i>
-                    <p class="mb-0">6 tabora, Kinshasa gombe, RDC</p>
-                  </div>
-                  <div class="d-flex mb-2">
-                    <i class="bi bi-envelope-open me-2"></i>
-                    <p class="mb-0">hello@243technologies.com</p>
-                  </div>
-                  <div class="d-flex mb-2">
-                    <i class="bi bi-telephone me-2"></i>
-                    <p class="mb-0">+243 810 836 943</p>
-                  </div>
-                  <div class="d-flex mt-4">
-                    <a
-                      class="btn btn-primary btn-square me-2"
-                      target="_blank"
-                      href="https://web.facebook.com/profile.php?id=100083306892317"
-                    >
-                      <i class="fab fa-facebook-f fw-normal"></i>
-                    </a>
-                    <a
-                      class="btn btn-primary btn-square me-2"
-                      target="_blank"
-                      href="https://www.linkedin.com/company/243technologies/"
-                    >
-                      <i class="fab fa-linkedin-in fw-normal"></i>
-                    </a>
-                    <a
-                      class="btn btn-primary btn-square"
-                      target="_blank"
-                      href="https://www.instagram.com/243_technologies/"
-                    >
-                      <i class="fab fa-instagram fw-normal"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                  <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                    <h3 class="text-light mb-0">Nos services</h3>
-                  </div>
-                  <div class="link-animated d-flex flex-column justify-content-start">
-                    <a class="text-light mb-2" href="#">
-                      <i class="bi bi-arrow-right me-2"></i>Consultance
-                    </a>
-                    <a class="text-light mb-2" href="#">
-                      <i class="bi bi-arrow-right me-2"></i>Traitement des
-                      données
-                    </a>
-                    <a class="text-light mb-2" href="#nos_services">
-                      <i class="bi bi-arrow-right me-2"></i>Assurance Qualité
-                    </a>
-                    <a class="text-light mb-2" href="#nos_valeurs">
-                      <i class="bi bi-arrow-right me-2"></i>Développement
-                      d'applications
-                    </a>
-                  </div>
-                </div>
-
-                <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                  <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                    <h3 class="text-light mb-0">Nos Offres</h3>
-                  </div>
-                  <div class="link-animated d-flex flex-column justify-content-start">
-                    <a href="" class="text-light mb-2">
-                      <i class="bi bi-arrow-right me-2"></i>
-                      Data Processing
-                    </a>
-                    <a href="" class="text-light mb-2 defaultFont">
-                      <i class="bi bi-arrow-right me-2"></i>
-                      Infrastructures Cloud
-                    </a>
-                    <a href="" class="text-light mb-2 defaultFont">
-                      <i class="bi bi-arrow-right me-2"></i>
-                      Développement d'application
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid text-white" style={{ background: "#061429" }}>
-        <div class="container text-center">
-          <div class="row justify-content-end">
-            <div class="col-lg-8 col-md-6">
-              <div
-                class="d-flex align-items-center justify-content-center"
-                style={{ height: "75px" }}
-              >
-                <p class="mb-0">
-                  &copy;{" "}
-                  <a class="text-white border-bottom" href="#">
-                    243 Technologies
-                  </a>
-                  . @ Copyright.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Footer />
     </Layout>
   );
 };
