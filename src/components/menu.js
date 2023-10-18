@@ -53,9 +53,8 @@ const Menu = () => {
             Offres
           </a>
           <a
-            href="#"
+            href="./team"
             class={getItemClass("teamPage")}
-            onClick={(e) => setDefaultMenuIndex("teamPage")}
           >
             Notre équipe
           </a>

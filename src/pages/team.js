@@ -34,14 +34,14 @@ const TeamPage = () => {
 
         <div
           class="container-fluid bg-primary py-5 bg-header"
-          style="margin-bottom: 90px;"
+          style={{marginBottom: "90px"}}
         >
           <div class="row py-1">
-            <div class="col-12 text-center" style="margin-top: 8%;">
+            <div class="col-12 text-center" style={{marginTop: "8%"}}>
               <h4 class="display-4 text-white animated zoomIn">
                 Notre &Eacute;quipe
               </h4>
-              <a href="" class="h5 text-white" style="font-size: 25px;">
+              <a href="" class="h5 text-white" style={{fontSize: "25px"}}>
                 Des professionnels prêts à vous accompagner
               </a>
             </div>
@@ -49,6 +49,20 @@ const TeamPage = () => {
         </div>
 
       </div>
+
+
+    <section class="team">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header">
+                <h4 class="text-primary">L'&Eacute;quipe 243 technologies à votre service</h4>
+            </div>
+    
+            <div class="row gy-4">
+                
+            </div>
+        </div>
+    </section>
+    
     </Layout>
   );
 };
