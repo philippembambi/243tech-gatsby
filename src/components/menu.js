@@ -1,6 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import logo from "../images/logo.png";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Menu = ({ path }) => {
     const [defaultMenuIndex, setDefaultMenuIndex] = useState("indexPage");
@@ -39,13 +39,20 @@ const Menu = ({ path }) => {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
       <a href="/" class="navbar-brand p-0">
-        <img src={logo} alt="logo" class="logo" />
+        <StaticImage
+          src="../images/logo.png"
+          class="logo"
+          objectFit="contain"
+          width={"160px"}
+          alt="Logo 243technologies"
+        />
       </a>
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarCollapse"
+        name="collapse"
       >
         <span class="fa fa-bars"></span>
       </button>
@@ -73,10 +80,7 @@ const Menu = ({ path }) => {
           >
             Offres
           </a>
-          <a
-            href="./team"
-            class={getItemClass("teamPage")}
-          >
+          <a href="./team" class={getItemClass("teamPage")}>
             Notre équipe
           </a>
           <a

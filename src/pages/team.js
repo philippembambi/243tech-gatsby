@@ -3,17 +3,10 @@ import Layout from "../components/layout";
 import { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-import "../lib/owlcarousel/assets/owl.carousel.min.css";
-import "../lib/animate/animate.min.css";
-import "../css/bootstrap.min.css";
-import "../css//bootstrap-icons/bootstrap-icons.css";
-import "../css/glightbox/css/glightbox.min.css";
-import "../css/style.css";
-import "../css/custom.css";
-
 import TopHeader from "../components/header";
 import Menu from "../components/menu";
 import Footer from "../components/footer";
+import Spot from "../components/spot";
 import TeamMember from "../components/teamMember";
 
 const TeamPage = () => {
@@ -77,9 +70,9 @@ const TeamPage = () => {
             <TeamMember
               name="Christian KAYEMBE"
               jobTitle="Tech Lead"
-              facebookLink="https://www.facebook.com/eldie.mapepe/"
-              instagramLink="https://www.instagram.com/eldie_mapepe/"
-              linkedInLink="https://www.linkedin.com/in/eldie-mapepe-a679321b8"
+              facebookLink="https://web.facebook.com/profile.php?id=100083306892317"
+              instagramLink="https://www.instagram.com/243_technologies/"
+              linkedInLink="https://www.linkedin.com/company/243technologies/"
             >
               <StaticImage
                 src={"../images/team_chris.jpg"}
@@ -91,9 +84,9 @@ const TeamPage = () => {
             <TeamMember
               name="Gaetan KWADIAMONA"
               jobTitle="Software Engineer"
-              facebookLink="https://www.facebook.com/eldie.mapepe/"
-              instagramLink="https://www.instagram.com/eldie_mapepe/"
-              linkedInLink="https://www.linkedin.com/in/eldie-mapepe-a679321b8"
+              facebookLink="https://web.facebook.com/profile.php?id=100083306892317"
+              instagramLink="https://www.instagram.com/243_technologies/"
+              linkedInLink="https://www.linkedin.com/company/243technologies/"
             >
               <StaticImage
                 src={"../images/team_gaetan.jpg"}
@@ -105,9 +98,9 @@ const TeamPage = () => {
             <TeamMember
               name="Josué MASUTA"
               jobTitle="QA Engineer"
-              facebookLink="https://www.facebook.com/eldie.mapepe/"
-              instagramLink="https://www.instagram.com/eldie_mapepe/"
-              linkedInLink="https://www.linkedin.com/in/eldie-mapepe-a679321b8"
+              facebookLink="https://web.facebook.com/profile.php?id=100083306892317"
+              instagramLink="https://www.instagram.com/243_technologies/"
+              linkedInLink="https://www.linkedin.com/company/243technologies/"
             >
               <StaticImage
                 src={"../images/team_josue.jpg"}
@@ -125,9 +118,9 @@ const TeamPage = () => {
             <TeamMember
               name="Cornella KUDIA"
               jobTitle="Marketing Staff"
-              facebookLink="https://www.facebook.com/eldie.mapepe/"
-              instagramLink="https://www.instagram.com/eldie_mapepe/"
-              linkedInLink="https://www.linkedin.com/in/eldie-mapepe-a679321b8"
+              facebookLink="https://web.facebook.com/profile.php?id=100083306892317"
+              instagramLink="https://www.instagram.com/243_technologies/"
+              linkedInLink="https://www.linkedin.com/company/243technologies/"
             >
               <StaticImage
                 src={"../images/team_cornella.jpg"}
@@ -139,16 +132,16 @@ const TeamPage = () => {
             <TeamMember
               name="Eveline MBIMBI"
               jobTitle="Project Manager"
-              facebookLink="https://www.facebook.com/eldie.mapepe/"
-              instagramLink="https://www.instagram.com/eldie_mapepe/"
-              linkedInLink="https://www.linkedin.com/in/eldie-mapepe-a679321b8"
+              facebookLink="https://web.facebook.com/profile.php?id=100083306892317"
+              instagramLink="https://www.instagram.com/243_technologies/"
+              linkedInLink="https://www.linkedin.com/company/243technologies/"
             >
               <StaticImage
                 src={"../images/team_ev.png"}
                 alt="Evline MBIMBI"
                 class="img-fluid"
                 style={{
-                    width: "100%"
+                  width: "100%",
                 }}
               />
             </TeamMember>
@@ -156,9 +149,9 @@ const TeamPage = () => {
             <TeamMember
               name="Divine MULUMBI"
               jobTitle="Marketing Staff"
-              facebookLink="https://www.facebook.com/eldie.mapepe/"
-              instagramLink="https://www.instagram.com/eldie_mapepe/"
-              linkedInLink="https://www.linkedin.com/in/eldie-mapepe-a679321b8"
+              facebookLink="https://web.facebook.com/profile.php?id=100083306892317"
+              instagramLink="https://www.instagram.com/243_technologies/"
+              linkedInLink="https://www.linkedin.com/company/243technologies/"
             >
               <StaticImage
                 src={"../images/team_d.png"}
@@ -166,10 +159,25 @@ const TeamPage = () => {
                 class="img-fluid"
               />
             </TeamMember>
+
+            <TeamMember
+              name="Philippe MBAMBI"
+              jobTitle="Software Engineer"
+              facebookLink="https://web.facebook.com/profile.php?id=100083306892317"
+              instagramLink="https://www.instagram.com/243_technologies/"
+              linkedInLink="https://www.linkedin.com/company/243technologies/"
+            >
+              <StaticImage
+                src={"../images/team_phil.jpg"}
+                alt="Philippe MBAMBI"
+                class="img-fluid"
+              />
+            </TeamMember>
           </div>
         </div>
       </section>
 
+      <Spot />
       <Footer />
     </Layout>
   );

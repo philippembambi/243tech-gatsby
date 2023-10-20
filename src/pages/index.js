@@ -1,27 +1,13 @@
 import * as React from "react";
-import { useEffect } from "react";
+import { StaticImage } from "gatsby-plugin-image";
 
-import "../lib/owlcarousel/assets/owl.carousel.min.css";
-import "../lib/animate/animate.min.css";
-import "../css/bootstrap.min.css";
-import "../css//bootstrap-icons/bootstrap-icons.css";
-import "../css/glightbox/css/glightbox.min.css";
-import "../css/style.css";
-import "../css/custom.css";
-
-import banner3 from "../images/banner-3.jpg";
-import banner2 from "../images/banner-two.jpg";
-import features from "../images/features.jpeg";
-import splot from "../multimedia/splot.mp4";
 import Layout from "../components/layout";
 import TopHeader from "../components/header";
 import Menu from "../components/menu";
 import Footer from "../components/footer";
+import Spot from "../components/spot";
 
 const IndexPage = () => {
-    useEffect(async () => {
-      await import("../js/main")
-    }, []);
 
   return (
     <Layout pageTitle="Page d'acceuil" path={"/"}>
@@ -43,7 +29,12 @@ const IndexPage = () => {
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="w-100 carousselimage" src={banner3} alt="Image" />
+              <StaticImage
+                class="w-100 carousselimage"
+                src="../images/banner-3.jpg"
+                alt="Caroussel Image 1"
+              />
+
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h3 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -54,7 +45,11 @@ const IndexPage = () => {
             </div>
 
             <div class="carousel-item">
-              <img class="w-100 carousselimage" src={banner2} alt="Image" />
+              <StaticImage
+                class="w-100 carousselimage"
+                src="../images/banner-two.jpg"
+                alt="Caroussel Image 1"
+              />
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h4 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -199,11 +194,12 @@ const IndexPage = () => {
             </div>
             <div class="col-lg-5" style={{ minHeight: "500px" }}>
               <div class="position-relative h-100">
-                <img
+                <StaticImage
                   class="position-absolute w-100 h-100 rounded wow zoomIn"
                   data-wow-delay="0.9s"
-                  src={features}
+                  src="../images/features.jpeg"
                   style={{ objectFit: "cover" }}
+                  alt="Our Values img"
                 />
               </div>
             </div>
@@ -240,7 +236,7 @@ const IndexPage = () => {
                   Nous mettons à votre disposition nos experts pour une
                   assistance de meilleure qualité
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -260,7 +256,7 @@ const IndexPage = () => {
                   Grâce au Big Data, nous donnons de la valeur aux données en
                   les traitant intélligement
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right text-secondary"></i>
                 </a>
               </div>
@@ -280,7 +276,7 @@ const IndexPage = () => {
                   Nous disposons d'une équipe d'experts en assurance qualité de
                   tous les produits
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right text-secondary"></i>
                 </a>
               </div>
@@ -296,11 +292,11 @@ const IndexPage = () => {
                 <h5 class="mb-3" style={{ color: "#555555" }}>
                   Développement d'applications
                 </h5>
-                <p class="m- defaultFont">
+                <p class="m-0">
                   Avez-vous besoin d'une solution logicielle ou d'un service
                   internet à mettre en place ?
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right text-secondary"></i>
                 </a>
               </div>
@@ -320,7 +316,7 @@ const IndexPage = () => {
                   Le développement étant évolué, il est nécessaire que le
                   processus d'intégration au déploiement soit automatisé.{" "}
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right text-secondary"></i>
                 </a>
               </div>
@@ -611,34 +607,7 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <section id="call-to-action" class="container call-to-action">
-        <div
-          class="container text-center splot-container"
-          data-aos="zoom-out"
-          style={{ height: "400px" }}
-        >
-          <div
-            class="splot-box container"
-            style={{
-              backgroundImage: `url(${banner3})`,
-              filter: "brightness(50%)",
-            }}
-          ></div>
-          <div
-            class="splot-box splot-overlay"
-            style={{ filter: "brightness(100%)" }}
-          >
-            <a href={splot} class="glightbox play-btn"></a>
-            <h4 style={{ color: "white" }}>
-              Tout savoir sur nous en 40 secondes
-            </h4>
-            <a class="cta-btn glightbox" href={splot}>
-              Ouvrir la vidéo
-            </a>
-          </div>
-        </div>
-      </section>
-
+      <Spot />
       <Footer />
     </Layout>
   );

@@ -5,6 +5,8 @@ module.exports = {
   siteMetadata: {
     title: `243technologies`,
     siteUrl: `https://243technologies.com`,
+    description: `Entreprise de développement des solutions logiciels et de traitement des données`,
+    image: `/src/images/favicon.ico`,
   },
   plugins: [
     `gatsby-plugin-image`,

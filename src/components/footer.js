@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/logo.png";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Footer = () => {
   return (
@@ -12,9 +12,13 @@ const Footer = () => {
           <div class="row gx-5">
             <div class="col-lg-4 col-md-6 footer-about">
               <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-dark p-4">
-                <a href="" class="navbar-brand">
+                <a href="#" class="navbar-brand">
                   <h1 class="m-0 text-white">
-                    <img src={logo} style={{ height: "120px" }} alt="" />
+                    <StaticImage
+                      src="../images/logo.png"
+                      style={{ height: "120px" }}
+                      alt="Logo 243technologies"
+                    />
                   </h1>
                 </a>
                 <p class="mt-3 mb-4 defaultFont">
@@ -113,15 +117,15 @@ const Footer = () => {
                     <h3 class="text-light mb-0">Nos Offres</h3>
                   </div>
                   <div class="link-animated d-flex flex-column justify-content-start">
-                    <a href="" class="text-light mb-2">
+                    <a href="#" class="text-light mb-2">
                       <i class="bi bi-arrow-right me-2"></i>
                       Data Processing
                     </a>
-                    <a href="" class="text-light mb-2 defaultFont">
+                    <a href="#" class="text-light mb-2 defaultFont">
                       <i class="bi bi-arrow-right me-2"></i>
                       Infrastructures Cloud
                     </a>
-                    <a href="" class="text-light mb-2 defaultFont">
+                    <a href="#" class="text-light mb-2 defaultFont">
                       <i class="bi bi-arrow-right me-2"></i>
                       Développement d'application
                     </a>
