@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/layout";
-import { useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import TopHeader from "../components/header";
@@ -10,9 +9,6 @@ import Spot from "../components/spot";
 import TeamMember from "../components/teamMember";
 
 const TeamPage = () => {
-  useEffect(async () => {
-    await import("../js/main");
-  }, []);
 
   return (
     <Layout pageTitle="Notre &aEcute;quipe" path={"/team"}>
@@ -108,7 +104,7 @@ const TeamPage = () => {
                 class="img-fluid"
               />
             </TeamMember>
-
+    <br />
             <div class="section-header">
               <h3 class="text-primary">
                 Des professionnels prêts à vous accompagner
@@ -161,15 +157,15 @@ const TeamPage = () => {
             </TeamMember>
 
             <TeamMember
-              name="Philippe MBAMBI"
-              jobTitle="Software Engineer"
+              name="Merveille BAKETA"
+              jobTitle="Data Engineer"
               facebookLink="https://web.facebook.com/profile.php?id=100083306892317"
               instagramLink="https://www.instagram.com/243_technologies/"
               linkedInLink="https://www.linkedin.com/company/243technologies/"
             >
               <StaticImage
-                src={"../images/team_phil.jpg"}
-                alt="Philippe MBAMBI"
+                src={"../images/merv.png"}
+                alt="Merveille BAKETA"
                 class="img-fluid"
               />
             </TeamMember>

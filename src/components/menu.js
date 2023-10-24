@@ -1,20 +1,21 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { globalHistory } from "@reach/router";
 
 const Menu = ({ path }) => {
     const [defaultMenuIndex, setDefaultMenuIndex] = useState("indexPage");
     
     useEffect(() => {
-        const url = window.location.href;
+        const hashUrl = globalHistory.location.hash;
         
         switch (path) {
           case "/":
-            if (url.indexOf("our_services") !== -1) {
+            if (hashUrl.indexOf("our_services") !== -1) {
               setDefaultMenuIndex("servicePage");
-            } else if (url.indexOf("our_offers") !== -1) {
+            } else if (hashUrl.indexOf("our_offers") !== -1) {
               setDefaultMenuIndex("offerPage");
-            } else if (url.indexOf("our_contacts") !== -1) {
+            } else if (hashUrl.indexOf("our_contacts") !== -1) {
               setDefaultMenuIndex("contactPage");
             } else {
               setDefaultMenuIndex("indexPage");
@@ -43,7 +44,7 @@ const Menu = ({ path }) => {
           src="../images/logo.png"
           class="logo"
           objectFit="contain"
-          width={"160px"}
+          width={160}
           alt="Logo 243technologies"
         />
       </a>

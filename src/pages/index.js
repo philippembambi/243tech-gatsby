@@ -507,7 +507,7 @@ const IndexPage = () => {
                       id="service"
                       style={{ height: "55px" }}
                     >
-                      <option selected>Selectionner le service</option>
+                      <option defaultValue>Selectionner le service</option>
                       <option value="1">Développement d'application</option>
                       <option value="2">infrastructures cloud</option>
                       <option value="3">Data Processing</option>
@@ -526,7 +526,7 @@ const IndexPage = () => {
                     <button
                       class="btn btn-secondary w-100 py-3 defaultFont"
                       type="submit"
-                      onclick="sendEmail()"
+                      onClick="sendEmail()"
                     >
                       <span
                         class="spinner-border d-none"
@@ -573,7 +573,7 @@ const IndexPage = () => {
         id="staticBackdrop"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >

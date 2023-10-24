@@ -34,8 +34,12 @@ const Layout = ({
     url: `${siteUrl}${pathname || ``}`,
   };
 
-   useEffect(async () => {
+   useEffect(() => {
+
+    async function fetchGlobalVar() {
      await import("../js/main");
+    }
+    fetchGlobalVar();
 
      const glightbox = glightboxMin({
        selector: ".glightbox",
