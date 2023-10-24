@@ -9,7 +9,17 @@ import Spot from "../components/spot";
 import TeamMember from "../components/teamMember";
 
 const TeamPage = () => {
+ useEffect(() => {
+   async function fetchGlobalVar() {
+     await import("../js/main");
+   }
+   fetchGlobalVar();
 
+   const glightbox = glightboxMin({
+     selector: ".glightbox",
+   });
+ }, []);
+ 
   return (
     <Layout pageTitle="Notre &aEcute;quipe" path={"/team"}>
       <div
