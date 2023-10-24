@@ -1,21 +1,19 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import { globalHistory } from "@reach/router";
 
-const Menu = ({ path }) => {
+const Menu = ({ path }, props) => {
     const [defaultMenuIndex, setDefaultMenuIndex] = useState("indexPage");
-    
+    const hash = window && window.location.hash;
     useEffect(() => {
-        const hashUrl = globalHistory.location.hash;
-        
+        console.log("props : ", props);
         switch (path) {
           case "/":
-            if (hashUrl.indexOf("our_services") !== -1) {
+            if (hash.indexOf("our_services") !== -1) {
               setDefaultMenuIndex("servicePage");
-            } else if (hashUrl.indexOf("our_offers") !== -1) {
+            } else if (hash.indexOf("our_offers") !== -1) {
               setDefaultMenuIndex("offerPage");
-            } else if (hashUrl.indexOf("our_contacts") !== -1) {
+            } else if (hash.indexOf("our_contacts") !== -1) {
               setDefaultMenuIndex("contactPage");
             } else {
               setDefaultMenuIndex("indexPage");
