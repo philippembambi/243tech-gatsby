@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { useSiteMetadata } from "../hooks/use-site-metadata";
 import logo from "../images/logo.png";
 import glightboxMin from 'glightbox';
 import { useEffect } from 'react';
@@ -19,6 +20,19 @@ const Layout = ({
   pageTitle,
   children,
 }) => {
+  const {
+    title: defaultTitle,
+    description: defaultDescription,
+    image,
+    siteUrl,
+  } = useSiteMetadata();
+
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: `${siteUrl}${image}`,
+    url: `${siteUrl}${pathname || ``}`,
+  };
 
    useEffect(() => {
 
@@ -37,10 +51,7 @@ const Layout = ({
       <title>243 Technologies</title>
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
       <meta name="keywords" content="243 Technologies" />
-      <meta
-        name="description"
-        content="Entreprise de développement des solutions logiciels et de traitement des données"
-      />
+      <meta name="description" content={seo.description} />
       <meta
         name="linkedIn:url"
         content="https://www.linkedin.com/company/243technologies/"
