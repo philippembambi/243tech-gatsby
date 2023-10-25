@@ -4,29 +4,28 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Menu = ({ path }, props) => {
     const [defaultMenuIndex, setDefaultMenuIndex] = useState("indexPage");
-    const hash = window && window.location.hash;
+    // const hash = window && window.location.hash;
     useEffect(() => {
-        console.log("props : ", props);
-        switch (path) {
-          case "/":
-            if (hash.indexOf("our_services") !== -1) {
-              setDefaultMenuIndex("servicePage");
-            } else if (hash.indexOf("our_offers") !== -1) {
-              setDefaultMenuIndex("offerPage");
-            } else if (hash.indexOf("our_contacts") !== -1) {
-              setDefaultMenuIndex("contactPage");
-            } else {
-              setDefaultMenuIndex("indexPage");
-            }
-            break;
+        // switch (path) {
+        //   case "/":
+        //     if (hash.indexOf("our_services") !== -1) {
+        //       setDefaultMenuIndex("servicePage");
+        //     } else if (hash.indexOf("our_offers") !== -1) {
+        //       setDefaultMenuIndex("offerPage");
+        //     } else if (hash.indexOf("our_contacts") !== -1) {
+        //       setDefaultMenuIndex("contactPage");
+        //     } else {
+        //       setDefaultMenuIndex("indexPage");
+        //     }
+        //     break;
 
-          case "/team":
-            setDefaultMenuIndex("teamPage");
-            break;
+        //   case "/team":
+        //     setDefaultMenuIndex("teamPage");
+        //     break;
 
-          default:
-            break;
-        }
+        //   default:
+        //     break;
+        // }
     }, []);
 
     const getItemClass = (link) => {
