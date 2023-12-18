@@ -1,22 +1,14 @@
 import * as React from "react";
 import { useEffect } from "react";
 
-import "../lib/owlcarousel/assets/owl.carousel.min.css";
-import "../lib/animate/animate.min.css";
-import "../css/bootstrap.min.css";
-import "../css//bootstrap-icons/bootstrap-icons.css";
-import "../css/glightbox/css/glightbox.min.css";
-import "../css/style.css";
-import "../css/custom.css";
-
 import banner3 from "../images/banner-3.jpg";
 import banner2 from "../images/banner-two.jpg";
 import features from "../images/features.jpeg";
-import splot from "../multimedia/splot.mp4";
 import Layout from "../components/layout";
 import TopHeader from "../components/header";
 import Menu from "../components/menu";
 import Footer from "../components/footer";
+import Spot from "../components/splot";
 
 const IndexPage = () => {
     useEffect(async () => {
@@ -611,34 +603,7 @@ const IndexPage = () => {
         </div>
       </div>
 
-      <section id="call-to-action" class="container call-to-action">
-        <div
-          class="container text-center splot-container"
-          data-aos="zoom-out"
-          style={{ height: "400px" }}
-        >
-          <div
-            class="splot-box container"
-            style={{
-              backgroundImage: `url(${banner3})`,
-              filter: "brightness(50%)",
-            }}
-          ></div>
-          <div
-            class="splot-box splot-overlay"
-            style={{ filter: "brightness(100%)" }}
-          >
-            <a href={splot} class="glightbox play-btn"></a>
-            <h4 style={{ color: "white" }}>
-              Tout savoir sur nous en 40 secondes
-            </h4>
-            <a class="cta-btn glightbox" href={splot}>
-              Ouvrir la vidéo
-            </a>
-          </div>
-        </div>
-      </section>
-
+      <Spot />
       <Footer />
     </Layout>
   );
