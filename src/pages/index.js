@@ -1,14 +1,10 @@
 import React from "react";
-import { useEffect } from "react";
-
-import banner3 from "../images/banner-3.jpg";
-import banner2 from "../images/banner-two.jpg";
-import features from "../images/features.jpeg";
 import Layout from "../components/layout";
 import TopHeader from "../components/header";
 import Menu from "../components/menu";
 import Footer from "../components/footer";
 import Spot from "../components/splot";
+import { StaticImage } from "gatsby-plugin-image";
 
 const IndexPage = () => {
 
