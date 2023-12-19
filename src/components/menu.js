@@ -1,12 +1,31 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import logo from "../images/logo.png";
+import { StaticImage } from "gatsby-plugin-image";
 
-const Menu = () => {
-    const [defaultMenuIndex, setDefaultMenuIndex] = useState("");
-
+const Menu = ({ path }, props) => {
+    const [defaultMenuIndex, setDefaultMenuIndex] = useState("indexPage");
+    // const hash = window && window.location.hash;
     useEffect(() => {
-        setDefaultMenuIndex("indexPage");
+        // switch (path) {
+        //   case "/":
+        //     if (hash.indexOf("our_services") !== -1) {
+        //       setDefaultMenuIndex("servicePage");
+        //     } else if (hash.indexOf("our_offers") !== -1) {
+        //       setDefaultMenuIndex("offerPage");
+        //     } else if (hash.indexOf("our_contacts") !== -1) {
+        //       setDefaultMenuIndex("contactPage");
+        //     } else {
+        //       setDefaultMenuIndex("indexPage");
+        //     }
+        //     break;
+
+        //   case "/team":
+        //     setDefaultMenuIndex("teamPage");
+        //     break;
+
+        //   default:
+        //     break;
+        // }
     }, []);
 
     const getItemClass = (link) => {
@@ -17,21 +36,28 @@ const Menu = () => {
 
   return (
     <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
-      <a href="./" class="navbar-brand p-0">
-        <img src={logo} alt="logo" class="logo" />
+      <a href="/" class="navbar-brand p-0">
+        <StaticImage
+          src="../images/logo.png"
+          class="logo"
+          objectFit="contain"
+          width={160}
+          alt="Logo 243technologies"
+        />
       </a>
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarCollapse"
+        name="collapse"
       >
         <span class="fa fa-bars"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
           <a
-            href="./"
+            href="/"
             class={getItemClass("indexPage")}
             onClick={(e) => setDefaultMenuIndex("indexPage")}
           >
@@ -39,27 +65,24 @@ const Menu = () => {
           </a>
 
           <a
-            href="#our_services"
+            href={path !== "/" ? "/#our_services" : "#our_services"}
             class={getItemClass("servicePage")}
             onClick={(e) => setDefaultMenuIndex("servicePage")}
           >
             Services
           </a>
           <a
-            href="#our_offers"
+            href={path !== "/" ? "/#our_offers" : "#our_offers"}
             class={getItemClass("offerPage")}
             onClick={(e) => setDefaultMenuIndex("offerPage")}
           >
             Offres
           </a>
-          <a
-            href="./team"
-            class={getItemClass("teamPage")}
-          >
+          <a href="./team" class={getItemClass("teamPage")}>
             Notre équipe
           </a>
           <a
-            href="#our_contacts"
+            href={path !== "/" ? "/#our_contacts" : "#our_contacts"}
             class={getItemClass("contactPage")}
             onClick={(e) => setDefaultMenuIndex("contactPage")}
           >

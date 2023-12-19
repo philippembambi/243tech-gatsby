@@ -468,10 +468,17 @@ h6,
     background-size: cover;
     height: 640px;
 }
+.bg-header .text-center {
+    margin-top: 10%;
+}
 
 @media (max-width: 600px) {
     .bg-header {
             height: 350px;
+        }
+
+        .bg-header .text-center {
+            margin-top: 25%;
         }
 }
 

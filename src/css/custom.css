@@ -106,9 +106,9 @@
 }
 
 .bg-header {
-  background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/team1.jpeg) center center no-repeat;
+  background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/bg1.jpeg) center center no-repeat;
   background-size: cover;
-  height: 640px;
+  height: 600px;
 }
 
 /**
@@ -210,7 +210,9 @@ section {
   margin-bottom: 0;
   color: #6f6f6f;
 }
-
+.section-header .team2 {
+  margin-top: 80px;
+}
 /*--------------------------------------------------------------
   # Breadcrumbs
   --------------------------------------------------------------*/

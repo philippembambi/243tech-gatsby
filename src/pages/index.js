@@ -11,12 +11,9 @@ import Footer from "../components/footer";
 import Spot from "../components/splot";
 
 const IndexPage = () => {
-    useEffect(async () => {
-      await import("../js/main")
-    }, []);
 
   return (
-    <Layout pageTitle="Page d'acceuil">
+    <Layout pageTitle="Page d'acceuil" path={"/"}>
       <div
         id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
@@ -26,8 +23,8 @@ const IndexPage = () => {
 
       <TopHeader />
       <div class="container-fluid position-relative p-0">
-      <Menu />
-      
+        <Menu path={"/"} />
+
         <div
           id="header-carousel"
           class="carousel slide carousel-fade"
@@ -35,7 +32,12 @@ const IndexPage = () => {
         >
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="w-100 carousselimage" src={banner3} alt="Image" />
+              <StaticImage
+                class="w-100 carousselimage"
+                src="../images/banner-3.jpg"
+                alt="Caroussel Image 1"
+              />
+
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h3 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -46,7 +48,11 @@ const IndexPage = () => {
             </div>
 
             <div class="carousel-item">
-              <img class="w-100 carousselimage" src={banner2} alt="Image" />
+              <StaticImage
+                class="w-100 carousselimage"
+                src="../images/banner-two.jpg"
+                alt="Caroussel Image 1"
+              />
               <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                 <div class="p-3" style={{ maxWidth: "900px" }}>
                   <h4 class="text-white text-uppercase mb-3 animated slideInDown">
@@ -191,11 +197,12 @@ const IndexPage = () => {
             </div>
             <div class="col-lg-5" style={{ minHeight: "500px" }}>
               <div class="position-relative h-100">
-                <img
+                <StaticImage
                   class="position-absolute w-100 h-100 rounded wow zoomIn"
                   data-wow-delay="0.9s"
-                  src={features}
+                  src="../images/features.jpeg"
                   style={{ objectFit: "cover" }}
+                  alt="Our Values img"
                 />
               </div>
             </div>
@@ -232,7 +239,7 @@ const IndexPage = () => {
                   Nous mettons à votre disposition nos experts pour une
                   assistance de meilleure qualité
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right"></i>
                 </a>
               </div>
@@ -252,7 +259,7 @@ const IndexPage = () => {
                   Grâce au Big Data, nous donnons de la valeur aux données en
                   les traitant intélligement
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right text-secondary"></i>
                 </a>
               </div>
@@ -272,7 +279,7 @@ const IndexPage = () => {
                   Nous disposons d'une équipe d'experts en assurance qualité de
                   tous les produits
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right text-secondary"></i>
                 </a>
               </div>
@@ -288,11 +295,11 @@ const IndexPage = () => {
                 <h5 class="mb-3" style={{ color: "#555555" }}>
                   Développement d'applications
                 </h5>
-                <p class="m- defaultFont">
+                <p class="m-0">
                   Avez-vous besoin d'une solution logicielle ou d'un service
                   internet à mettre en place ?
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right text-secondary"></i>
                 </a>
               </div>
@@ -312,7 +319,7 @@ const IndexPage = () => {
                   Le développement étant évolué, il est nécessaire que le
                   processus d'intégration au déploiement soit automatisé.{" "}
                 </p>
-                <a class="btn btn-lg btn-primary rounded" href="">
+                <a class="btn btn-lg btn-primary rounded" href="#">
                   <i class="bi bi-arrow-right text-secondary"></i>
                 </a>
               </div>
@@ -503,7 +510,7 @@ const IndexPage = () => {
                       id="service"
                       style={{ height: "55px" }}
                     >
-                      <option selected>Selectionner le service</option>
+                      <option defaultValue>Selectionner le service</option>
                       <option value="1">Développement d'application</option>
                       <option value="2">infrastructures cloud</option>
                       <option value="3">Data Processing</option>
@@ -522,7 +529,7 @@ const IndexPage = () => {
                     <button
                       class="btn btn-secondary w-100 py-3 defaultFont"
                       type="submit"
-                      onclick="sendEmail()"
+                      onClick="sendEmail()"
                     >
                       <span
                         class="spinner-border d-none"
@@ -569,7 +576,7 @@ const IndexPage = () => {
         id="staticBackdrop"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="staticBackdropLabel"
         aria-hidden="true"
       >
@@ -603,6 +610,7 @@ const IndexPage = () => {
         </div>
       </div>
 
+      <Spot />
       <Spot />
       <Footer />
     </Layout>
