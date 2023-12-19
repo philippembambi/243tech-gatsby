@@ -1,16 +1,13 @@
 import React from 'react';
-import { useEffect } from 'react';
+import "../lib/owlcarousel/assets/owl.carousel.min.css";
+import "../lib/animate/animate.min.css";
+import "../css/bootstrap.min.css";
+import "../css/bootstrap-icons/bootstrap-icons.css";
+import "../css/glightbox/css/glightbox.min.css";
+import "../css/style.css";
+import "../css/custom.css";
 
 const Layout = ({ pageTitle, children }) => {
-    useEffect(async () => {
-        await import("../lib/owlcarousel/assets/owl.carousel.min.css");
-        await import("../lib/animate/animate.min.css");
-        await import("../css/bootstrap.min.css");
-        await import("../css/bootstrap-icons/bootstrap-icons.css");
-        await import("../css/glightbox/css/glightbox.min.css");
-        await import("../css/style.css");
-        await import("../css/custom.css");        
-      }, []);
   
     return (
         <div>
