@@ -11,8 +11,7 @@ const Layout = ({ pageTitle, children }) => {
     useEffect(async() => {
         await import("../js/main")
         await import("../css/glightbox/css/glightbox.min.css");
-        await import(
-          "https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"
+        await import("https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"
         );
     })
     return (
