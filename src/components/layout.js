@@ -6,6 +6,7 @@ import "../css/bootstrap-icons/bootstrap-icons.css";
 import "../css/glightbox/css/glightbox.min.css";
 import "../css/style.css";
 import "../css/custom.css";
+import "../js/main";
 
 const Layout = ({ pageTitle, children }) => {
   
