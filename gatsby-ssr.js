@@ -12,5 +12,21 @@ export const onRenderBody = ({ setHeadComponents }, pluginOptions) => {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>,
     <script src="https://cdn.jsdelivr.net/npm/glightbox@3.2.0/dist/js/glightbox.min.js"></script>,
     <script src="./src/js/main.js"></script>,
+    <link
+      href="./src/lib/owlcarousel/assets/owl.carousel.min.css"
+      rel="stylesheet"
+    />,
+    <link href="./src/lib/animate/animate.min.css" rel="stylesheet" />,
+    <link href="./src/css/bootstrap.min.css" rel="stylesheet" />,
+    <link
+      href="./src/css/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />,
+    <link href="./src/css/style.css" rel="stylesheet" />,
+    <link href="./src/css/custom.css" rel="stylesheet" />,
+    <link
+      href="./src/css/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />,
   ]);
 };
