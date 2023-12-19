@@ -65,24 +65,24 @@ const Menu = ({ path }, props) => {
           </a>
 
           <a
-            href={path !== "/" ? "/#our_services" : "#our_services"}
+            href={"#our_services"}
             class={getItemClass("servicePage")}
             onClick={(e) => setDefaultMenuIndex("servicePage")}
           >
             Services
           </a>
           <a
-            href={path !== "/" ? "/#our_offers" : "#our_offers"}
+            href={"#our_offers"}
             class={getItemClass("offerPage")}
             onClick={(e) => setDefaultMenuIndex("offerPage")}
           >
             Offres
           </a>
-          <a href="./team" class={getItemClass("teamPage")}>
+          <a href="/team" class={getItemClass("teamPage")}>
             Notre équipe
           </a>
           <a
-            href={path !== "/" ? "/#our_contacts" : "#our_contacts"}
+            href={"#our_contacts"}
             class={getItemClass("contactPage")}
             onClick={(e) => setDefaultMenuIndex("contactPage")}
           >

@@ -607,7 +607,6 @@ const IndexPage = () => {
       </div>
 
       <Spot />
-      <Spot />
       <Footer />
     </Layout>
   );
