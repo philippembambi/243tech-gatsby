@@ -20,7 +20,7 @@ const TeamPage = () => {
 
       <TopHeader />
       <div class="container-fluid position-relative p-0">
-        <Menu path={"/team"} />
+        <Menu path={"teamPage"} />
 
         <div
           class="container-fluid bg-primary py-5 bg-header"
@@ -103,7 +103,7 @@ const TeamPage = () => {
                 class="img-fluid"
               />
             </TeamMember>
-    <br />
+            <br />
             <div class="section-header">
               <h3 class="text-primary">
                 Des professionnels prêts à vous accompagner

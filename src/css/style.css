@@ -472,12 +472,48 @@ h6,
     margin-top: 10%;
 }
 
+.bg-header2 {
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/b1.jpg) center center no-repeat;
+    background-size: cover;
+    height: 640px;
+}
+
+.bg-header2 .text-center {
+    margin-top: 10%;
+}
+
+.bg-header3 {
+    background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../images/banner-3.jpg) center center no-repeat;
+    background-size: cover;
+    height: 640px;
+}
+
+.bg-header3 .text-center {
+    margin-top: 10%;
+}
+
 @media (max-width: 600px) {
     .bg-header {
             height: 350px;
         }
 
         .bg-header .text-center {
+            margin-top: 25%;
+        }
+
+        .bg-header2 {
+            height: 350px;
+        }
+    
+        .bg-header2 .text-center {
+            margin-top: 25%;
+        }
+
+        .bg-header3 {
+            height: 350px;
+        }
+    
+        .bg-header3 .text-center {
             margin-top: 25%;
         }
 }

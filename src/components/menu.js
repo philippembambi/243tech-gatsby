@@ -2,10 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
-const Menu = ({ path }, props) => {
+const Menu = ({ path }) => {
     const [defaultMenuIndex, setDefaultMenuIndex] = useState("indexPage");
     // const hash = window && window.location.hash;
     useEffect(() => {
+      setDefaultMenuIndex(path);
         // switch (path) {
         //   case "/":
         //     if (hash.indexOf("our_services") !== -1) {
@@ -65,24 +66,28 @@ const Menu = ({ path }, props) => {
           </a>
 
           <a
-            href={"#our_services"}
+            href={"/service"}
             class={getItemClass("servicePage")}
             onClick={(e) => setDefaultMenuIndex("servicePage")}
           >
             Services
           </a>
           <a
-            href={"#our_offers"}
+            href={"/offer"}
             class={getItemClass("offerPage")}
             onClick={(e) => setDefaultMenuIndex("offerPage")}
           >
             Offres
           </a>
-          <a href="/team" class={getItemClass("teamPage")}>
+          <a
+            href="/team"
+            class={getItemClass("teamPage")}
+            onClick={(e) => setDefaultMenuIndex("teamPage")}
+          >
             Notre équipe
           </a>
           <a
-            href={"#our_contacts"}
+            href={"/contact"}
             class={getItemClass("contactPage")}
             onClick={(e) => setDefaultMenuIndex("contactPage")}
           >

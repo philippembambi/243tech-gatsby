@@ -19,7 +19,7 @@ const IndexPage = () => {
 
       <TopHeader />
       <div class="container-fluid position-relative p-0">
-        <Menu path={"/"} />
+        <Menu path={"indexPage"} />
 
         <div
           id="header-carousel"
