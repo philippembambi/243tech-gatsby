@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "../components/layout";
-import { StaticImage } from "gatsby-plugin-image";
 import TopHeader from "../components/header";
 import Menu from "../components/menu";
 import Footer from "../components/footer";
